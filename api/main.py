@@ -24,7 +24,12 @@ class WaterSample(BaseModel):
 
 def get_artifact():
     path=ROOT/"models"/"model.joblib"
-    if not path.exists(): raise HTTPException(status_code=503,detail="Colab-та модельді оқытып, models/model.joblib файлын салыңыз.")
+    if not path.exists():
+        try:
+            from scripts.restore_model import restore_model
+            path=restore_model()
+        except FileNotFoundError:
+            raise HTTPException(status_code=503,detail="Модель жоқ. models/model.joblib файлын орналастырыңыз.")
     return joblib.load(path)
 
 def log_decision(endpoint,payload,result):
