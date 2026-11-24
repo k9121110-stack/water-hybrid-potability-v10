@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+kaggle.json
+data/*.csv
+data/*.zip
+*.sqlite3
+.DS_Store
