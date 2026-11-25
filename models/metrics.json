@@ -1,33 +1,33 @@
 {
-  "threshold": 0.6712965367965367,
-  "threshold_reason": "validation precision >= 0.75 ішіндегі ең жоғары recall",
-  "precision_potable": 0.8085106382978723,
-  "recall_potable": 0.1484375,
+  "threshold": 0.5516761363636364,
+  "threshold_reason": "validation accuracy maximum; test set was not used to choose threshold",
+  "precision_potable": 0.6466165413533834,
+  "recall_potable": 0.3359375,
   "average_precision": 0.6074996682139069,
   "report": {
     "not potable": {
-      "precision": 0.6420361247947455,
-      "recall": 0.9775,
-      "f1-score": 0.7750247770069376,
+      "precision": 0.6749521988527725,
+      "recall": 0.8825,
+      "f1-score": 0.7648970747562297,
       "support": 400.0
     },
     "potable": {
-      "precision": 0.8085106382978723,
-      "recall": 0.1484375,
-      "f1-score": 0.2508250825082508,
+      "precision": 0.6466165413533834,
+      "recall": 0.3359375,
+      "f1-score": 0.442159383033419,
       "support": 256.0
     },
-    "accuracy": 0.6539634146341463,
+    "accuracy": 0.6692073170731707,
     "macro avg": {
-      "precision": 0.7252733815463088,
-      "recall": 0.56296875,
-      "f1-score": 0.5129249297575942,
+      "precision": 0.660784370103078,
+      "recall": 0.6092187499999999,
+      "f1-score": 0.6035282288948244,
       "support": 656.0
     },
     "weighted avg": {
-      "precision": 0.7070017886008437,
-      "recall": 0.6539634146341463,
-      "f1-score": 0.5704590425684256,
+      "precision": 0.6638943812920354,
+      "recall": 0.6692073170731707,
+      "f1-score": 0.6389506584741572,
       "support": 656.0
     }
   },
@@ -58,5 +58,22 @@
         "model__max_leaf_nodes": 31
       }
     }
-  ]
+  ],
+  "threshold_objective": "accuracy",
+  "test_accuracy": 0.6692073170731707,
+  "f1_potable": 0.442159383033419,
+  "confusion_matrix": [
+    [
+      353,
+      47
+    ],
+    [
+      170,
+      86
+    ]
+  ],
+  "validation_accuracy": 0.6984732824427481,
+  "previous_precision_target_threshold": 0.6712965367965367,
+  "previous_test_accuracy": 0.6539634146341463,
+  "precision_tradeoff_note": "Potable precision fell below 0.75 as accuracy and recall increased; this is a screening model only."
 }

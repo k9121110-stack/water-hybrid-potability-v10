@@ -2,12 +2,12 @@
 
 №10 нұсқаға арналған гибридті оқу жобасы. Сараптамалық тексерулер мен машиналық оқыту моделін біріктіріп, Kaggle Water Potability дерегіндегі `Potability` класын болжайды.
 
-> Бұл жүйе оқу мақсатындағы скрининг қана. Ол су ішуге қауіпсіз деген сертификат бермейді және зертханалық талдауды алмастырмайды.
+> Бұл жүйе оқу мақсатындағы скрининг қана. Accuracy-ді арттырғанда Potable precision 0.809-дан 0.647-ге төмендеді. Ол су ішуге қауіпсіз деген сертификат бермейді және зертханалық талдауды алмастырмайды.
 
 ## Дайын нәтиже
 
 - Оқытылған Random Forest артефактісі: `models/model.joblib`.
-- Таңдалған threshold: 0.6713; test precision (Potable): 0.809; recall: 0.148; Average Precision: 0.6075.
+- Таңдалған threshold: 0.5517; test accuracy: 0.669; Potable precision: 0.647; recall: 0.336; F1: 0.442; Average Precision: 0.6075.
 - Салыстырылған CV Average Precision: Logistic Regression 0.391254, Random Forest 0.574162, HistGradientBoosting 0.562963.
 - Толық әдіс пен нәтижелер `report.docx` есебінде берілген.
 
